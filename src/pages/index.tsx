@@ -15,6 +15,7 @@ const styles = {
   },
 
   links: {
+    marginTop: `1rem`,
     display: `flex`,
     justifyContent: `space-between`
   }
