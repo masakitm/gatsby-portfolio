@@ -13,7 +13,7 @@ export default function AboutPage () {
           <p>本サイトで利用した技術</p>
           <ul>
             <li>language: typescript</li>
-            <li>framework: gatsby</li>
+            <li>SPA framework: gatsby</li>
             <li>librariess: react, react-markdown, axios</li>
             <li>css framework: not used any css frameworks</li>
           </ul>
