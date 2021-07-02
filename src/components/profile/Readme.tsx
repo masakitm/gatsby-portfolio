@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown'
 import axios from 'axios'
 
 import CommonWindow from '../common/CommonWindow'
+import Loading from '../common/Loading'
 
 const { useEffect, useState } = React
 
@@ -26,7 +27,11 @@ export default function Profile () {
   return(
     <CommonWindow>
       <div className="markdown">
-        <ReactMarkdown children={md} />
+        { 
+          md 
+          ? <ReactMarkdown children={md} />
+          : <Loading />
+        }
       </div>
     </CommonWindow>
   )

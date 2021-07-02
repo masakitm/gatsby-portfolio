@@ -1,6 +1,5 @@
 import * as React from 'react'
 import ToTop from '../components/common/ToTop'
-
 import CommonWindow from '../components/common/CommonWindow'
 
 export default function AboutPage () {
@@ -9,15 +8,26 @@ export default function AboutPage () {
       <ToTop />
       <CommonWindow>
         <div className="markdown">
-          about this page<br />
+          <h2>about this page</h2>
 
-          利用した技術
+          <p>本サイトで利用した技術</p>
           <ul>
-            <li>gatsby</li>
-            <li>axios</li>
-            <li>react-markdown</li>
-            <li>typescript</li>
+            <li>language: typescript</li>
+            <li>framework: gatsby</li>
+            <li>librariess: react, react-markdown, axios</li>
           </ul>
+
+          <p>
+            source: 
+            <a
+              href="https://github.com/masakitm/gatsby-portfolio"
+              aria-label="source"
+              target="_blank"
+              rel="norefferer"
+            >
+              github
+            </a>
+          </p>
         </div>
       </CommonWindow>
 
