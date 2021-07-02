@@ -7,7 +7,6 @@ type Props = {
 }
 
 import * as styles from './header.module.css'
-import { navigate } from "gatsby"
 
 export default function Header (props: Props) {
   const { showModal, reset } = props
