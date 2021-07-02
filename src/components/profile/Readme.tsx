@@ -2,10 +2,7 @@ import * as React from 'react'
 import ReactMarkdown from 'react-markdown'
 import axios from 'axios'
 
-import Window from '../common/Window'
-import Console from '../common/Console'
-
-import * as styles from './readme.module.css'
+import CommonWindow from '../common/CommonWindow'
 
 const { useEffect, useState } = React
 
@@ -27,14 +24,10 @@ export default function Profile () {
   }, [])
 
   return(
-    <div className={styles.container}>
-      <Window>
-        <Console>
-          <div className="markdown">
-            <ReactMarkdown children={md} />
-          </div>
-        </Console>
-      </Window>
-    </div>
+    <CommonWindow>
+      <div className="markdown">
+        <ReactMarkdown children={md} />
+      </div>
+    </CommonWindow>
   )
 }

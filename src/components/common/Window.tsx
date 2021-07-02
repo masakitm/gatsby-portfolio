@@ -16,7 +16,7 @@ export default function Window (props: Props) {
         <span className={styles.button_yellow}>●</span>
         <span className={styles.button_green}>●</span>
       </div>
-
+      
       { children }
     </div>
   )

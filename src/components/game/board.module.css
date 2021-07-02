@@ -3,6 +3,10 @@
   width: var(--width);
   height: var(--width);
   margin: 3rem auto 0;
+
+  animation-name: game;
+  animation-duration: 0.5s;
+  transform: scale(1)
 }
 
 .steps {
@@ -17,4 +21,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@keyframes game {
+  0% {
+    transform: scale(0)
+  }
+
+  100% {
+    transform: scale(1)
+  }
 }

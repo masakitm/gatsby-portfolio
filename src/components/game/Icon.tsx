@@ -25,7 +25,7 @@ export default function Icon (props: Props = defaultProps) {
   const { size, coloredCells } = props
 
   return (
-    <div className={styles.container}>
+    <div className={styles.icon_container}>
       <div className={styles.icon}>
         {
           iconCellList.map(item => {

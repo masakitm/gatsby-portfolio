@@ -1,6 +1,6 @@
 /* Console */
 .console {
-  height: 100%;
+  height: calc(100% - var(--sp) * 1.5);
   padding: 2rem;
   color: #fff;
   background: var(--darkgray);

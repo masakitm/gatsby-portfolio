@@ -13,13 +13,6 @@ module.exports = {
         path: "./src/pages/",
       },
       __key: "pages",
-    },
-    {
-      resolve: 'gatsby-plugin-root-import',
-      options: {
-        src: path.join(__dirname, 'src'),
-        pages: path.join(__dirname, 'src/pages')
-      }
     }
   ]
 };
