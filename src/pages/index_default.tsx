@@ -1,54 +1,54 @@
 import * as React from "react"
 
 // styles
-const pageStyles = {
+const pageStyles: Style = {
   color: "#232129",
   padding: 96,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
 }
-const headingStyles = {
+const headingStyles: Style = {
   marginTop: 0,
   marginBottom: 64,
   maxWidth: 320,
 }
-const headingAccentStyles = {
+const headingAccentStyles: Style = {
   color: "#663399",
 }
-const paragraphStyles = {
+const paragraphStyles: Style = {
   marginBottom: 48,
 }
-const codeStyles = {
+const codeStyles: Style = {
   color: "#8A6534",
   padding: 4,
   backgroundColor: "#FFF4DB",
   fontSize: "1.25rem",
   borderRadius: 4,
 }
-const listStyles = {
+const listStyles: Style = {
   marginBottom: 96,
   paddingLeft: 0,
 }
-const listItemStyles = {
+const listItemStyles: Style = {
   fontWeight: 300,
   fontSize: 24,
   maxWidth: 560,
   marginBottom: 30,
 }
 
-const linkStyle = {
+const linkStyle: Style = {
   color: "#8954A8",
   fontWeight: "bold",
   fontSize: 16,
   verticalAlign: "5%",
 }
 
-const docLinkStyle = {
+const docLinkStyle: Style = {
   ...linkStyle,
   listStyleType: "none",
   marginBottom: 24,
 }
 
-const descriptionStyle = {
+const descriptionStyle: Style = {
   color: "#232129",
   fontSize: 14,
   marginTop: 10,
@@ -56,13 +56,13 @@ const descriptionStyle = {
   lineHeight: 1.25,
 }
 
-const docLink = {
+const docLink: Style = {
   text: "Documentation",
   url: "https://www.gatsbyjs.com/docs/",
   color: "#8954A8",
 }
 
-const badgeStyle = {
+const badgeStyle: Style = {
   color: "#fff",
   backgroundColor: "#088413",
   border: "1px solid #088413",

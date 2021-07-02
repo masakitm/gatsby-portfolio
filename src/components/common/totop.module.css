@@ -1,0 +1,7 @@
+/* ToTop */
+.totop {
+  position: absolute;
+  top: var(--sp);
+  left: calc(var(--sp) * 2);
+  font-size: calc(var(--sp) * 0.9);
+}

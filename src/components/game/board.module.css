@@ -1,0 +1,20 @@
+/* Board */
+.board {
+  width: var(--width);
+  height: var(--width);
+  margin: 3rem auto 0;
+}
+
+.steps {
+  margin-top: var(--sp);
+}
+
+.count {
+  font-weight: 700;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

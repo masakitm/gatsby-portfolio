@@ -1,0 +1,9 @@
+/* Console */
+.console {
+  height: 100%;
+  padding: 2rem;
+  color: #fff;
+  background: var(--darkgray);
+  border-radius: 4px;
+  overflow: scroll;
+}

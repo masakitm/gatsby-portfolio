@@ -1,0 +1,19 @@
+/* Icon */
+.container {
+  display: inline-block;
+}
+
+.icon {
+  display: grid;
+  grid-template-columns: 10px 10px 10px;
+}
+
+.cell {
+  margin: 2px;
+  border-radius: var(--radius);
+  background: var(--blue);
+}
+
+.colored {
+  background: var(--orange);
+}

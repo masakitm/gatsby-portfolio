@@ -1,0 +1,27 @@
+/* Header */
+.button:not(:first-child) {
+  margin-left: var(--sp);
+}
+
+.header {
+  padding: 0.5rem;
+  background: var(--white);
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--width);
+  margin: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.title {
+  margin-left: 10px;
+}
