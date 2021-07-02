@@ -5,7 +5,7 @@
   margin: 3rem auto 0;
 
   animation-name: game;
-  animation-duration: 0.5s;
+  animation-duration: 0.4s;
   transform: scaleX(1) scaleY(1);
 }
 
