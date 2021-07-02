@@ -15,6 +15,7 @@ export default function AboutPage () {
             <li>language: typescript</li>
             <li>framework: gatsby</li>
             <li>librariess: react, react-markdown, axios</li>
+            <li>css framework: not used any css frameworks</li>
           </ul>
 
           <p>
