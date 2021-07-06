@@ -4,9 +4,9 @@ import axios from 'axios'
 
 import CommonWindow from '../common/CommonWindow'
 import Loading from '../common/Loading'
+import ToTopInConsole from '../common/ToTopInConsole'
 
 const { useEffect, useState } = React
-
 
 export default function Profile () {
   const [md, setMd] = useState('')
@@ -32,6 +32,7 @@ export default function Profile () {
           ? <ReactMarkdown children={md} />
           : <Loading />
         }
+        <ToTopInConsole />
       </div>
     </CommonWindow>
   )

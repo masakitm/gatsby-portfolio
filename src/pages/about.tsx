@@ -3,21 +3,24 @@ import ToTop from '../components/common/ToTop'
 import CommonWindow from '../components/common/CommonWindow'
 import CommonInformation from '../components/common/CommonInformation'
 
+import ToTopInConsole from '../components/common/ToTopInConsole'
+
 export default function AboutPage () {
   return (
     <>
-      <ToTop />
+      {/* <ToTop /> */}
       <CommonInformation />
       <CommonWindow>
         <div className="markdown">
           <h2>about this page</h2>
 
-          <p>本サイトで利用した技術</p>
+          <p>本Webページアプリケーションで利用した技術</p>
           <ul>
             <li>language: typescript</li>
             <li>SPA framework: gatsby</li>
-            <li>librariess: react, react-markdown, axios</li>
+            <li>javascript librariess: react, react-markdown, axios, redux, redux toolkit</li>
             <li>css framework: not used any css frameworks</li>
+            <li>hosting: vercel</li>
           </ul>
 
           <p>
@@ -31,6 +34,7 @@ export default function AboutPage () {
               github
             </a>
           </p>
+          <ToTopInConsole />
         </div>
       </CommonWindow>
     </>

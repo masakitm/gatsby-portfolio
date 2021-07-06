@@ -6,7 +6,8 @@
   --lightorange: rgba(246, 98, 52, 0.5);
   --blue: #9198e5;
   --gray: #EDF2F7;
-  --white: #FFF;
+  --white: #eeeeee;
+  --purewhite: #ffffff;
   --text: #2c3e50;
   --black: #202124;
   --darkgray: #35363A;
@@ -14,6 +15,13 @@
   --yellow: #F4BF4F;
   --green: #61C654;
   
+  --ghorange: #f2b17e;
+  --ghblue: #87C1F9;
+  --ghpurple: #C1A7F3;
+  --ghgreen: #94E9AD;
+  --ghyellow: #FFDC00;
+  --ghpink: #E088DB;
+
   --width: 75vh;
   --radius: 6%;
   --modalWidth: 55vh;

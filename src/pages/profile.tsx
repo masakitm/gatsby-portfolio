@@ -6,7 +6,7 @@ import CommonInformation from '../components/common/CommonInformation'
 export default function ProfilePage () {
   return(
     <>
-      <ToTop />
+      {/* <ToTop /> */}
       <CommonInformation />
       <Readme />
     </>

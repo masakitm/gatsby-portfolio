@@ -1,0 +1,26 @@
+/* ToTopInConsole */
+.totop {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.arrow {
+  margin-top: var(--sp);
+  display: inline-block;
+  margin-right: calc(var(--sp) / 2);
+  animation-name: anime;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+
+
+  100% {
+    opacity: 1;
+  }
+}
