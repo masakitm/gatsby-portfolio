@@ -1,11 +1,13 @@
 import * as React from 'react'
 import ToTop from '../components/common/ToTop'
 import CommonWindow from '../components/common/CommonWindow'
+import CommonInformation from '../components/common/CommonInformation'
 
 export default function AboutPage () {
   return (
     <>
       <ToTop />
+      <CommonInformation />
       <CommonWindow>
         <div className="markdown">
           <h2>about this page</h2>
@@ -31,7 +33,6 @@ export default function AboutPage () {
           </p>
         </div>
       </CommonWindow>
-
     </>
   )
 }

@@ -1,0 +1,29 @@
+/* CommonFooter */
+.information {
+  text-align: center;
+}
+
+.links {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  display: flex;
+  width: 90px;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+
+.link {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.link_qiita {
+  width: 1.5rem;
+  height: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1;
+}

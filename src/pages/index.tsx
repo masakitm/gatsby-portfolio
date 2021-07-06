@@ -2,6 +2,7 @@ import * as React from 'react'
 import { Link } from 'gatsby'
 import Window from '../components/common/Window'
 import Console from '../components/common/Console'
+import CommonInformation from '../components/common/CommonInformation'
 
 import '../styles/style.css'
 
@@ -24,17 +25,20 @@ const styles = {
 export default function Index () {
   return (
     <div style={styles.container}>
-      <Window>
-        <Console>
-          <h1>MasakiTM</h1>
-          
-          <div style={styles.links}>
-            <Link to="/about">About</Link>
-            <Link to="/profile">Profile</Link>
-            <Link to="/game">Game</Link>
-          </div>
-        </Console>
-      </Window>
+      <div>
+        <CommonInformation />
+        <Window>
+          <Console>
+            <h1>MasakiTM</h1>
+            
+            <div style={styles.links}>
+              <Link to="/about">About</Link>
+              <Link to="/profile">Profile</Link>
+              <Link to="/game">Game</Link>
+            </div>
+          </Console>
+        </Window>
+      </div>
     </div>
   )
 }
