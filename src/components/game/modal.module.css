@@ -53,7 +53,7 @@
   opacity: 1;
   animation-name: fadeIn;
   animation-duration: 1.2s;
-  padding: 2rem;
+  padding: calc(var(--sp) * 2);
 }
 
 @keyframes fadeIn {
@@ -71,7 +71,7 @@
 }
 
 .paragraph {
-  margin-top: 2rem;
+  margin-top: calc(var(--sp) * 2);
 }
 
 .figure {

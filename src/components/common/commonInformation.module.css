@@ -5,8 +5,8 @@
 
 .links {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
+  top: var(--sp);
+  right: var(--sp);
 
   display: flex;
   width: 90px;
@@ -16,14 +16,14 @@
 }
 
 .link {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: calc(var(--sp) * 1.5);
+  height: calc(var(--sp) * 1.5);
 }
 
 .link_qiita {
-  width: 1.5rem;
-  height: 1.5rem;
-  font-size: 1.8rem;
+  width: calc(var(--sp) * 1.5);
+  height: calc(var(--sp) * 1.5);
+  font-size: calc(var(--sp) * 1.8);
   font-weight: bold;
   line-height: 1;
 }

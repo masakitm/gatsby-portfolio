@@ -1,6 +1,7 @@
 /* Icon */
 .icon_container {
   display: inline-block;
+  vertical-align: middle;
 }
 
 .icon {

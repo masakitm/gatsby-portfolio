@@ -2,7 +2,7 @@
 .board {
   width: var(--width);
   height: var(--width);
-  margin: 3rem auto 0;
+  margin: calc(var(--sp) * 3) auto 0;
 
   animation-name: game;
   animation-duration: 0.4s;

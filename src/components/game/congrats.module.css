@@ -62,7 +62,7 @@
   }
 
   100% {
-    padding: 3rem 0;
+    padding: calc(var(--sp) * 3) 0;
     height: 35vh;
   }
 }

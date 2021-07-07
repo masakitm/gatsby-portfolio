@@ -4,7 +4,7 @@
 }
 
 .header {
-  padding: 0.5rem;
+  padding: calc(var(--sp) / 2);
   background: var(--purewhite);
 }
 

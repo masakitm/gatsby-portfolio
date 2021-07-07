@@ -26,13 +26,13 @@ export default function Modal (props: Props = defaultProps) {
         <div>
           <h2>あそびかた</h2>
           <div className={styles.paragraph}>
-            パネルをおしてみましょう。<br />
+            <span className="blue">パネル</span>をおしてみましょう。<br />
             おしたところと、上下左右4つの色が反転します。
           </div>
 
           <div className={styles.paragraph}>
             <Icon
-              coloredCells={[5,8,9]}
+              coloredCells={[]}
               size={6}
             />
             　→　
