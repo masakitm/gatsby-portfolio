@@ -21,7 +21,7 @@ module.exports = {
       resolve: `gatsby-plugin-react-redux`,
       options: {
         // [required] - path to your createStore module
-        pathToCreateStoreModule: './src/store/createStore',
+        pathToCreateStoreModule: './src/store/index',
         serialize: {
           space: 0,
           isJSON: true,
