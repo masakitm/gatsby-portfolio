@@ -5,8 +5,6 @@ import Window from '../components/common/Window'
 import Console from '../components/common/Console'
 import CommonInformation from '../components/common/CommonInformation'
 
-
-
 const styles = {
   container: {
     display: `flex`,

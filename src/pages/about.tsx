@@ -1,19 +1,18 @@
 import * as React from 'react'
 import CommonWindow from '../components/common/CommonWindow'
-import ToTop from '../components/common/ToTop'
 import ToTopInConsole from '../components/common/ToTopInConsole'
 import CommonInformation from '../components/common/CommonInformation'
 
 export default function AboutPage () {
   return (
     <>
-      {/* <ToTop /> */}
       <CommonInformation />
       <CommonWindow>
         <div className="markdown">
           <h2>about this page</h2>
 
           <p>本Webページアプリケーションで利用した技術</p>
+          
           <ul>
             <li>language: typescript</li>
             <li>SPA framework: gatsby</li>
