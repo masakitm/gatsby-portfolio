@@ -1,5 +1,7 @@
 import React from 'react'
 
+import './src/styles/style.css'
+
 export const wrapRootElement = ({
   element,
 }) => {

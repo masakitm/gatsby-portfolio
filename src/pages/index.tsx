@@ -1,10 +1,11 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
+
 import Window from '../components/common/Window'
 import Console from '../components/common/Console'
 import CommonInformation from '../components/common/CommonInformation'
 
-import '../styles/style.css'
+
 
 const styles = {
   container: {
