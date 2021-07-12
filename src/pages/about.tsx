@@ -32,6 +32,7 @@ export default function AboutPage () {
               github
             </a>
           </p>
+          
           <ToTopInConsole />
         </div>
       </CommonWindow>
