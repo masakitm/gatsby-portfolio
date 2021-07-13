@@ -8,7 +8,7 @@ export default function ToTop () {
   return (
     <div className={styles.totop}>
       <Link to="/">
-        <IconArrow vector="left" />back to top
+        <IconArrow vector="left" />BACK TO TOP
       </Link>
     </div>
   )

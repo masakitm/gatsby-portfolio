@@ -4,12 +4,14 @@
   background: var(--blue); 
   border-radius: var(--radius);
   transition-timing-function: ease-out;
+  transition-duration: 0.21s;
   box-shadow: 0 2px 4px rgb(67 133 187 / 7%);
+  transform: perspective(600px) rotateX(180deg);
 }
 
 .truthy {
   background: var(--orange);
-  transition-duration: 0.1s;
+  transform: perspective(600px) rotateX(0deg);
 }
 
 .truthy:after {
