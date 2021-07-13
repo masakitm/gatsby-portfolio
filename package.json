@@ -22,7 +22,7 @@
     "axios": "^0.21.1",
     "gatsby": "^3.6.2",
     "gatsby-plugin-image": "^1.8.0",
-    "gatsby-plugin-mdx": "^2.8.0",
+    "gatsby-plugin-mdx": "^2.9.0",
     "gatsby-plugin-sharp": "^3.8.0",
     "gatsby-source-filesystem": "^3.8.0",
     "gatsby-transformer-sharp": "^3.8.0",

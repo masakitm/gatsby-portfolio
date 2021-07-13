@@ -5,33 +5,37 @@ module.exports = {
     title: "MasakiTM",
   },
   plugins: [
-    "gatsby-plugin-mdx",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
       },
-      __key: "pages",
     },
     {
-      resolve: `gatsby-plugin-react-redux`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        // [required] - path to your createStore module
-        pathToCreateStoreModule: './src/store/index',
-        serialize: {
-          space: 0,
-          isJSON: true,
-          unsafe: false,
-          ignoreFunction: true,
+        name: `posts`,
+        path: `${__dirname}/src/posts/`,
+      },
+    },
+    {
+      resolve: "gatsby-plugin-page-creator",
+      options: {
+        path: `${__dirname}/src/posts`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.mdx`, `.md`],
+        defaultLayouts: {
+          posts: require.resolve(`${__dirname}/src/components/Layout.tsx`),
+          default: require.resolve(`${__dirname}/src/components/DefaultLayout.tsx`),
         },
-        // [optional] - if true will clean up after itself on the client, default:
-        cleanupOnClient: true,
-        // [optional] - name of key on `window` where serialized state will be stored, default:
-        windowKey: '__PRELOADED_STATE__',
       },
     }
   ]
