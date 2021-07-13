@@ -1,5 +1,4 @@
 import * as React from 'react'
-import ToTop from '../components/common/ToTop'
 import CommonWindow from '../components/common/CommonWindow'
 import CommonInformation from '../components/common/CommonInformation'
 
@@ -8,7 +7,6 @@ import ToTopInConsole from '../components/common/ToTopInConsole'
 export default function AboutPage () {
   return (
     <>
-      {/* <ToTop /> */}
       <CommonInformation />
       <CommonWindow>
         <div className="markdown">
