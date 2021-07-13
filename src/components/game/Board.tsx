@@ -1,8 +1,8 @@
 import * as React from 'react'
 const { useEffect } = React
 
-import { useLightsOut } from '../../hooks/useLightsOut'
-import { useModal } from '../../hooks/useModal'
+import { useLightsOut } from '@/hooks/useLightsOut'
+import { useModal } from '@/hooks/useModal'
 
 import Cell from './Cell'
 import Header from './Header'

@@ -2,8 +2,8 @@
 import * as React from "react"
 const { useMemo, useState, useEffect } = React
 
-import { clone } from '../utils'
-import { BOARD_SIZES } from '../consts'
+import { clone } from '@/utils'
+import { BOARD_SIZES } from '@/consts'
 
 const isCleared = (board: Board): boolean => board.flat().every((cell: Cell) => cell.status === true)
 
