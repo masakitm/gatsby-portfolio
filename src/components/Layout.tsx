@@ -17,7 +17,13 @@ export type Mdx = {
   body: string
 }
 
-export default function PageTemplate({ data: { mdx } }: { data: { mdx: Mdx } }) {
+type Props = {
+  data: {
+    mdx: Mdx
+  }
+}
+
+export default function PageTemplate({ data: { mdx } }: Props ) {
   return (
     <>
       <CommonInformation />
@@ -34,9 +40,8 @@ export default function PageTemplate({ data: { mdx } }: { data: { mdx: Mdx } }) 
           <MDXProvider components={{}}>
             <MDXRenderer>{mdx.body}</MDXRenderer>
           </MDXProvider>
-
         </div>
-        
+
         <ToTopInConsole />
       </CommonWindow>
     </>
