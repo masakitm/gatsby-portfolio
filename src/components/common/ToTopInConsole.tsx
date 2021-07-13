@@ -3,10 +3,18 @@ import { Link } from 'gatsby'
 
 import * as styles from './toTopInConsole.module.css'
 
-export default function ToTopInConsole () {
+type Align = {
+  align?: 'left' | 'center' | 'right'
+}
+
+export default function ToTopInConsole ({ align }: Align) {
+  const textAlign = align || 'left'
   return (
     <Link to="/">
-      <div className={styles.totop}>
+      <div 
+        className={styles.totop}
+        style={{ textAlign }}
+      >
         <span className={styles.arrow}>&lt;</span> BACK TO TOP
       </div>
     </Link>

@@ -51,9 +51,8 @@ export default function AboutPage () {
 
           <h3>Source</h3>
           <p>source: <LinkToOtherDomain path="https://github.com/masakitm/gatsby-portfolio" /></p>
-
-          <ToTopInConsole />
         </div>
+        <ToTopInConsole />
       </CommonWindow>
     </>
   )

@@ -32,8 +32,8 @@ export default function Profile () {
           ? <ReactMarkdown children={md} />
           : <Loading />
         }
-        <ToTopInConsole />
       </div>
+      <ToTopInConsole />
     </CommonWindow>
   )
 }
