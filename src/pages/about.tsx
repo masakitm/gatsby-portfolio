@@ -4,6 +4,19 @@ import CommonInformation from '../components/common/CommonInformation'
 
 import ToTopInConsole from '../components/common/ToTopInConsole'
 
+function LinkToOtherDomain ({ path }: { path: string }) {
+  return (
+    <a
+      href={path}
+      aria-label="source"
+      target="_blank"
+      rel="norefferer"
+    >
+      {path}
+    </a>
+  )
+}
+
 export default function AboutPage () {
   return (
     <>
@@ -22,23 +35,23 @@ export default function AboutPage () {
             <li>ホスティング: vercel</li>
           </ul>
 
-          <h3>AUTHOR</h3>
+          <h3>Author</h3>
           <ul>
             <li>開発: masakitm</li>
             <li>デザイン: masakitm</li>
           </ul>
 
-          <p>
-            source: 
-            <a
-              href="https://github.com/masakitm/gatsby-portfolio"
-              aria-label="source"
-              target="_blank"
-              rel="norefferer"
-            >
-              github
-            </a>
-          </p>
+          <h3>Links</h3>
+          <ul>
+            <li>Github: <LinkToOtherDomain path="https://github.com/masakitm/" /></li>
+            <li>Zenn.dev: <LinkToOtherDomain path="https://zenn.dev/masakitm/" /></li>
+            <li>Qiita: <LinkToOtherDomain path="https://qiita.com/_masakitm_" /></li>
+            <li>Portfolio(2017, old): <LinkToOtherDomain path="http://masakit.herokuapp.com/" /></li>
+          </ul>
+
+          <h3>Source</h3>
+          <p>source: <LinkToOtherDomain path="https://github.com/masakitm/gatsby-portfolio" /></p>
+          
           <ToTopInConsole />
         </div>
       </CommonWindow>
