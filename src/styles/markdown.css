@@ -41,3 +41,8 @@
 .markdown span {
   color: var(--ghpurple);
 }
+
+.markdown a,
+.markdown a:visited {
+  color: var(--ghpink);
+}

@@ -33,7 +33,7 @@ module.exports = {
       options: {
         extensions: [`.mdx`, `.md`],
         defaultLayouts: {
-          posts: require.resolve(`${__dirname}/src/components/Layout.tsx`),
+          posts: require.resolve(`${__dirname}/src/components/posts/Layout.tsx`),
         },
       },
     }
