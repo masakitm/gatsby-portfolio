@@ -1,15 +1,15 @@
-export type CssValue =  string | number
+type CssValue =  string | number
 
-export type Style = {
+type Style = {
   [cssProperties: string]: CssValue
 }
 
-export type Cell = {
+type Cell = {
   status: boolean,
   id: number 
 }
 
-export type Row = [] | Cell[]
-export type Board = [] | Row[]
+type Row = [] | Cell[]
+type Board = [] | Row[]
 
-export type Empty = null | undefined
+type Empty = null | undefined
