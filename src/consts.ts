@@ -16,3 +16,5 @@ export const BOARD_SIZES = Object.freeze([
 ])
 
 export const ICON_CELLS = 9;
+
+export const AUTHOR = 'masakitm';
