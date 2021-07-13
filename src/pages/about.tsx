@@ -12,13 +12,20 @@ export default function AboutPage () {
         <div className="markdown">
           <h2>about this page</h2>
 
-          <p>本Webページアプリケーションで利用した技術</p>
+          <h3>本アプリケーションで利用した技術</h3>
           <ul>
-            <li>language: typescript</li>
-            <li>SPA framework: gatsby</li>
-            <li>javascript librariess: react, react-markdown, axios, redux, redux toolkit</li>
-            <li>css framework: not used any css frameworks</li>
-            <li>hosting: vercel</li>
+            <li>言語: typescript, GraphQL</li>
+            <li>フレームワーク: gatsby</li>
+            <li>ライブラリ: react, react-markdown, axios, redux, redux toolkit</li>
+            <li>ドキュメント: mdx, markdown</li>
+            <li>cssフレームワーク: not used any css frameworks</li>
+            <li>ホスティング: vercel</li>
+          </ul>
+
+          <h3>AUTHOR</h3>
+          <ul>
+            <li>開発: masakitm</li>
+            <li>デザイン: masakitm</li>
           </ul>
 
           <p>
