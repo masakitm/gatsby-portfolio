@@ -43,6 +43,7 @@
 }
 
 .markdown a,
+.markdown a:-webkit-any-link,
 .markdown a:visited {
   color: var(--ghpink);
 }

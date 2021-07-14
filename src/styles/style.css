@@ -54,6 +54,10 @@ html, body {
   box-sizing: border-box;
 }
 
+a:-webkit-any-link {
+  color: var(--white);
+}
+
 button {
   background: none;
   border: none;
