@@ -29,11 +29,10 @@ export default function PageTemplate({ data: { mdx } }: Props ) {
       <div style={{ padding: "0 1rem", marginBottom: "10rem" }}>
         <h1>{mdx.frontmatter?.title}</h1>
         <h4
-          style={{
-            color: "gray",
-            fontWeight: "normal",
-          }}
-        >{`${mdx.frontmatter?.date} by ${mdx.frontmatter?.author || AUTHOR}`}</h4>
+          style={{ color: "gray", fontWeight: "normal" }}
+        >
+          {`${mdx.frontmatter?.date} by ${mdx.frontmatter?.author || AUTHOR}`}
+        </h4>
         
         <MDXProvider components={{}}>
           <MDXRenderer>{mdx.body}</MDXRenderer>

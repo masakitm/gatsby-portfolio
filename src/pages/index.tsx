@@ -18,6 +18,10 @@ const styles = {
   links: {
     display: `flex`,
     justifyContent: `space-between`
+  },
+
+  link: {
+    padding: `0 0.3rem`
   }
 }
 
@@ -31,9 +35,10 @@ export default function Index () {
             <h1>MasakiTM</h1>
             
             <div style={styles.links}>
-              <Link to="/about">About</Link>
-              <Link to="/profile">Profile</Link>
-              <Link to="/game">Game</Link>
+              <Link style={styles.link} to="/about">About</Link>
+              <Link style={styles.link} to="/profile">Profile</Link>
+              <Link style={styles.link} to="/posts">Posts</Link>
+              <Link style={styles.link} to="/game">Game</Link>
             </div>
           </Console>
         </Window>
