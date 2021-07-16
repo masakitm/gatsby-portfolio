@@ -2,7 +2,7 @@ import * as React from 'react'
 import CommonWindow from '@/components/common/CommonWindow'
 import CommonInformation from '@/components/common/CommonInformation'
 
-import ToTopInConsole from '@/components/common/ToTopInConsole'
+import ConsoleLink from '@/components/common/ConsoleLink'
 
 function LinkToOtherDomain ({ path }: { path: string }) {
   return (
@@ -52,7 +52,7 @@ export default function AboutPage () {
           <h3>Source</h3>
           <p>source: <LinkToOtherDomain path="https://github.com/masakitm/gatsby-portfolio" /></p>
         </div>
-        <ToTopInConsole />
+        <ConsoleLink />
       </CommonWindow>
     </>
   )

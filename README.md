@@ -3,6 +3,11 @@ TODO
 2. manage global states
 3. add mdx blog
 4. add next stage button to congrats (with redux)
+5. design update for blog contents
+
+
+
+
 
 Refference
 https://dev.to/adamgoth/building-a-blog-with-gatsby-and-mdx-2eh9

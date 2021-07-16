@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import CommonWindow from '@/components/common/CommonWindow'
 import CommonInformation from '@/components/common/CommonInformation'
-import ToTopInConsole from '@/components/common/ToTopInConsole'
+import ConsoleLink from '@/components/common/ConsoleLink'
 
 type ArticleProps = {
   info: {
@@ -64,7 +64,7 @@ export default function Posts ({ data }: PostsProps) {
         <CommonWindow
           width={width}
         >
-          <ToTopInConsole />
+          <ConsoleLink />
         </CommonWindow>
       </div>
     </>

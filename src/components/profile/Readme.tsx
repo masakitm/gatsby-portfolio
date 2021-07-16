@@ -4,7 +4,7 @@ import axios from 'axios'
 
 import CommonWindow from '@/components/common/CommonWindow'
 import Loading from '@/components/common/Loading'
-import ToTopInConsole from '@/components/common/ToTopInConsole'
+import ConsoleLink from '@/components/common/ConsoleLink'
 
 const { useEffect, useState } = React
 
@@ -33,7 +33,7 @@ export default function Profile () {
           : <Loading />
         }
       </div>
-      <ToTopInConsole />
+      <ConsoleLink />
     </CommonWindow>
   )
 }

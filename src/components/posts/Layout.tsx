@@ -4,9 +4,9 @@ import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-// import CommonWindow from '@/components/common/CommonWindow'
-// import CommonInformation from '@/components/common/CommonInformation'
-// import ToTopInConsole from '@/components/common/ToTopInConsole'
+import CommonWindow from '@/components/common/CommonWindow'
+import CommonInformation from '@/components/common/CommonInformation'
+import ConsoleLink from '@/components/common/ConsoleLink'
 
 import { AUTHOR } from '@/consts'
 
@@ -26,18 +26,33 @@ type Props = {
 export default function PageTemplate({ data: { mdx } }: Props ) {
   return (
     <>
-      <div style={{ padding: "0 1rem", marginBottom: "10rem" }}>
-        <h1>{mdx.frontmatter?.title}</h1>
-        <h4
-          style={{ color: "gray", fontWeight: "normal" }}
+      <CommonInformation />
+      <CommonWindow>
+        <div 
+          className="markdown"
+          style={{ padding: "0 1rem", marginBottom: "2rem" }}
         >
-          {`${mdx.frontmatter?.date} by ${mdx.frontmatter?.author || AUTHOR}`}
-        </h4>
-        
-        <MDXProvider components={{}}>
-          <MDXRenderer>{mdx.body}</MDXRenderer>
-        </MDXProvider>
-      </div>
+          <h1>{mdx.frontmatter?.title}</h1>
+
+          <h4
+            style={{ 
+              color: "gray", 
+              fontWeight: "normal" 
+            }}
+          >
+            {`${mdx.frontmatter?.date} by ${mdx.frontmatter?.author || AUTHOR}`}
+          </h4>
+          
+          <MDXProvider components={{}}>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </MDXProvider>
+        </div>
+
+        <ConsoleLink
+          to="/posts"
+          text="BACK TO POSTS"
+        />
+      </CommonWindow>
     </>
   )
 }

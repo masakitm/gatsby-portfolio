@@ -39,11 +39,20 @@
 }
 
 .markdown span {
-  color: var(--ghpurple);
+  color: var(--ghgreen);
 }
 
 .markdown a,
 .markdown a:-webkit-any-link,
 .markdown a:visited {
-  color: var(--ghpink);
+  color: var(--ghpurple);
+}
+
+.markdown code, 
+.markdown aside {
+  font-size: 0.8rem;
+  padding: calc(var(--sp) * 0.8);
+  background: rgba(255,255,255,0.1);
+  border: 1px solid var(--gray);
+  border-radius: 4px;
 }
