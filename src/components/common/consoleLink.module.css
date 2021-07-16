@@ -1,5 +1,15 @@
 /* ConsoleLink */
-.totop {
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.consoleLink {
   font-size: 0.8rem;
   font-weight: bold;
 }
@@ -13,12 +23,3 @@
   opacity: 1;
 }
 
-@keyframes anime {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}

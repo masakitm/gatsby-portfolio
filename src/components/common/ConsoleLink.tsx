@@ -17,7 +17,7 @@ export default function ConsoleLink ({ align, text, to }: Props) {
   return (
     <Link to={linkTo}>
       <div 
-        className={styles.totop}
+        className={styles.consoleLink}
         style={{ textAlign }}
       >
         <span className={styles.arrow}>&lt;</span> {linkText}

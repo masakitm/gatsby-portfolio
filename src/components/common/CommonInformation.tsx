@@ -1,5 +1,4 @@
 import * as React from 'react'
-
 import * as styles from './commonInformation.module.css'
 
 const color = `#2c3e50`

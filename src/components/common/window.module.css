@@ -10,6 +10,9 @@
     0 19.2px 19.8px rgba(0, 0, 0, 0.092),
     0 38.4px 34.8px rgba(0, 0, 0, 0.1),
     0 101px 74px rgba(0, 0, 0, 0.13);
+  /* box-shadow: 
+    25px 25px 49px #bebebe,
+    -25px -25px 49px #ffffff; */
 }
 
 .buttons {
