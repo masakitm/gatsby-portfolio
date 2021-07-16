@@ -13,16 +13,14 @@ type ArticleProps = {
 function Article ({ info }: ArticleProps) {
   const { title, slug, date } = info
   return (
-    <div>
+    <div className="markdown">
       <Link to={slug}>
         <h1>{title || 'No Title'}</h1>
-        <h2>{date || '2099/01/01'}</h2>
+        <h6>{date || '2099/01/01'}</h6>
       </Link>
     </div>
   )
 }
-
-const width = `33vw`
 
 type Edge = {
   node: {
@@ -47,9 +45,7 @@ export default function Posts ({ data }: PostsProps) {
       <div>
         {data?.allMdx?.edges?.map(edge => {
             return (
-              <CommonWindow
-                width={width}
-              >
+              <CommonWindow>
                 <Article
                   info={{ ...edge.node.frontmatter }}
                   key={edge.node.id}
@@ -62,7 +58,6 @@ export default function Posts ({ data }: PostsProps) {
 
       <div>
         <CommonWindow
-          width={width}
         >
           <ConsoleLink />
         </CommonWindow>

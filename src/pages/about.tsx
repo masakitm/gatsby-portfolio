@@ -42,12 +42,12 @@ export default function AboutPage () {
           </ul>
 
           <h3>Links</h3>
-          <ul>
-            <li>Github: <LinkToOtherDomain path="https://github.com/masakitm/" /></li>
-            <li>Zenn.dev: <LinkToOtherDomain path="https://zenn.dev/masakitm/" /></li>
-            <li>Qiita: <LinkToOtherDomain path="https://qiita.com/_masakitm_" /></li>
-            <li>Portfolio(2017, old): <LinkToOtherDomain path="http://masakit.herokuapp.com/" /></li>
-          </ul>
+          <table>
+            <tr><td>Github </td><td>: <LinkToOtherDomain path="https://github.com/masakitm/" /></td></tr>
+            <tr><td>Zenn.dev </td><td>: <LinkToOtherDomain path="https://zenn.dev/masakitm/" /></td></tr>
+            <tr><td>Qiita </td><td>: <LinkToOtherDomain path="https://qiita.com/_masakitm_" /></td></tr>
+            <tr><td>Portfolio(2017, old) </td><td>: <LinkToOtherDomain path="http://masakit.herokuapp.com/" /></td></tr>
+          </table>
 
           <h3>Source</h3>
           <p>source: <LinkToOtherDomain path="https://github.com/masakitm/gatsby-portfolio" /></p>

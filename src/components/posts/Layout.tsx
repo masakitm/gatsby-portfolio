@@ -30,18 +30,13 @@ export default function PageTemplate({ data: { mdx } }: Props ) {
       <CommonWindow>
         <div 
           className="markdown"
-          style={{ padding: "0 1rem", marginBottom: "2rem" }}
+          style={{ padding: "0 1rem" }}
         >
           <h1>{mdx.frontmatter?.title}</h1>
 
-          <h4
-            style={{ 
-              color: "gray", 
-              fontWeight: "normal" 
-            }}
-          >
+          <h6>
             {`${mdx.frontmatter?.date} by ${mdx.frontmatter?.author || AUTHOR}`}
-          </h4>
+          </h6>
           
           <MDXProvider components={{}}>
             <MDXRenderer>{mdx.body}</MDXRenderer>

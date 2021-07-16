@@ -2,6 +2,7 @@
 .markdown {
   width: var(--width);
   text-align: left;
+  margin-bottom: calc(var(--sp) * 2);
 }
 
 .markdown h1,
@@ -10,17 +11,27 @@
 .markdown h4,
 .markdown h5,
 .markdown h6 {
-  margin-bottom: var(--sp);
+  margin: calc(var(--sp) * 1.5) 0 calc(var(--sp) / 2);
   color: var(--ghblue);
 }
 
-.markdown h1:before,
-.markdown h2:before,
-.markdown h3:before,
-.markdown h4:before,
-.markdown h5:before,
-.markdown h6:before {
+.markdown h1 {
+  margin-top: 0;
+}
+
+.markdown h1::before,
+.markdown h2::before,
+.markdown h3::before,
+.markdown h4::before,
+.markdown h5::before,
+.markdown h6::before {
   content: '# '
+}
+
+.markdown h6 {
+  font-size: 1rem;
+  color: var(--gray);
+  font-weight: normal;
 }
 
 .markdown p {
@@ -31,7 +42,6 @@
 .markdown ul {
   list-style-type: disc;
   padding-left: var(--sp);
-  margin-bottom: var(--sp);
 }
 
 .markdown li {
@@ -55,4 +65,8 @@
   background: rgba(255,255,255,0.1);
   border: 1px solid var(--gray);
   border-radius: 4px;
+}
+
+.markdown table {
+  font-size: calc(var(--sp) * 0.9);
 }
