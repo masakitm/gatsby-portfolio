@@ -1,9 +1,8 @@
 import * as React from 'react'
 import { Link } from 'gatsby'
-
-import Window from '../components/common/Window'
-import Console from '../components/common/Console'
-import CommonInformation from '../components/common/CommonInformation'
+import Window from '@/components/common/Window'
+import Console from '@/components/common/Console'
+import CommonInformation from '@/components/common/CommonInformation'
 
 const styles = {
   container: {
@@ -16,7 +15,8 @@ const styles = {
 
   links: {
     display: `flex`,
-    justifyContent: `space-between`
+    justifyContent: `space-between`,
+    gap: `1ch`
   }
 }
 
@@ -32,6 +32,7 @@ export default function Index () {
             <div style={styles.links}>
               <Link to="/about">About</Link>
               <Link to="/profile">Profile</Link>
+              <Link to="/posts">Posts</Link>
               <Link to="/game">Game</Link>
             </div>
           </Console>

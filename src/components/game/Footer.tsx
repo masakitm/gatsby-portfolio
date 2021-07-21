@@ -1,7 +1,7 @@
 import * as React from 'react'
-import IconArrow from '../common/IconArrow'
+import IconArrow from '@/components/common/IconArrow'
 
-import { BOARD_SIZES } from '../../consts'
+import { BOARD_SIZES } from '@/consts'
 
 import * as styles from './footer.module.css'
 

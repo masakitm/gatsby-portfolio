@@ -5,12 +5,13 @@
   --orange: rgba(246, 98, 52, 0.95);
   --lightorange: rgba(246, 98, 52, 0.5);
   --blue: #9198e5;
-  --gray: #EDF2F7;
+  --lightgray: #EDF2F7;
+  --gray: gray;
+  --darkgray: #35363A;
   --white: #eeeeee;
   --purewhite: #ffffff;
   --text: #2c3e50;
   --black: #202124;
-  --darkgray: #35363A;
   --red: #ED6A5E;
   --yellow: #F4BF4F;
   --green: #61C654;
@@ -34,7 +35,7 @@ html, body {
   height: 100%;
   min-height: 800px;
   line-height: 1.8;
-  background: var(--gray);
+  background: var(--lightgray);
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -52,6 +53,10 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a:-webkit-any-link {
+  color: var(--white);
 }
 
 button {

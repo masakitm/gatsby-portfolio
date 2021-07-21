@@ -2,9 +2,9 @@ import * as React from 'react'
 import ReactMarkdown from 'react-markdown'
 import axios from 'axios'
 
-import CommonWindow from '../common/CommonWindow'
-import Loading from '../common/Loading'
-import ToTopInConsole from '../common/ToTopInConsole'
+import CommonWindow from '@/components/common/CommonWindow'
+import Loading from '@/components/common/Loading'
+import ConsoleLink from '@/components/common/ConsoleLink'
 
 const { useEffect, useState } = React
 
@@ -32,8 +32,8 @@ export default function Profile () {
           ? <ReactMarkdown children={md} />
           : <Loading />
         }
-        <ToTopInConsole />
       </div>
+      <ConsoleLink />
     </CommonWindow>
   )
 }

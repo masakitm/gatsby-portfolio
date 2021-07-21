@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { TITLE } from '../../consts'
+import { TITLE } from '@/consts'
 import Icon from './Icon'
 
 type Props = {
