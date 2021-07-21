@@ -3,7 +3,7 @@ TODO
 2. manage global states
 3. add mdx blog
 4. add next stage button to congrats (with redux)
-5. design update for blog contents
+5. design update for blog contents//
 
 
 
