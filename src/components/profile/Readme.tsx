@@ -13,7 +13,7 @@ const { useEffect } = React
 
 export default function Profile () {
   const dispatch = useDispatch()
-  const md = useSelector(state => state.profile.md);
+  const md = useSelector((state: RootState) => state.profile.md);
 
   const load = async () => {
     try {
