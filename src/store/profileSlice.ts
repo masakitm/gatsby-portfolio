@@ -1,6 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialState: { md: string } = {
+export type ProfileState = {
+  md: string 
+}
+
+const initialState: ProfileState = {
   md: ''
 }
 

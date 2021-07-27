@@ -1,10 +1,12 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-const initialState: {
+export type GameState =  {
   board: Board,
   size: number,
   steps: number
-} = {
+} 
+
+const initialState: GameState = {
   board: [],
   size: 0,
   steps: 0

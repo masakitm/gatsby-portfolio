@@ -1,8 +1,8 @@
 import * as React from 'react'
-import { useSelector, useDispatch } from "react-redux";
 import ReactMarkdown from 'react-markdown'
 import axios from 'axios'
 
+import { useSelector, useDispatch } from "react-redux";
 import { updateMd } from '@/store/profileSlice'
 
 import CommonWindow from '@/components/common/CommonWindow'
@@ -13,12 +13,14 @@ const { useEffect } = React
 
 export default function Profile () {
   const dispatch = useDispatch()
-  const md = useSelector((state: RootState) => state.profile.md);
+  const md = useSelector<RootState, string>(state => state.profile.md)
+
+  const setMd = (markdown: string) => dispatch(updateMd(markdown))
 
   const load = async () => {
     try {
       const fetched = await axios.get('https://raw.githubusercontent.com/masakitm/my-profile/main/README.md')
-      dispatch(updateMd(fetched.data))
+      setMd(fetched.data)
     } catch(error) {
       console.error(error)
     }
