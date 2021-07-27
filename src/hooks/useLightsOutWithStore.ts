@@ -10,6 +10,8 @@ const { useMemo, useEffect } = React
 const isCleared = (board: Board): boolean => board.flat().every((cell: Cell) => cell.status === true)
 
 export function useLightsOut () {
+  let id = 0
+
   // redux
   const dispatch = useDispatch()
   const { board, size, steps } = useSelector<RootState, GameState>(state => state.game)
@@ -19,21 +21,18 @@ export function useLightsOut () {
   const setBoard = (payload: Board) => dispatch(updateBoard(payload))
 
   // main
-  let id = 0
-  const allChecked = useMemo(() => isCleared(board), [board]);
-
   useEffect(() => init(), [size])
+
+  const allChecked = useMemo(() => isCleared(board), [board]);
   
   const createRow = (): Row => {
     const row = []
 
     for (let i = 0; i < size; i++) {
-      row.push(
-        {
-          id,
-          status: Math.random() >= 0.5
-        }
-      )
+      row.push({
+        id,
+        status: Math.random() >= 0.5
+      })
       id++
     }
 
@@ -54,6 +53,7 @@ export function useLightsOut () {
     if (!size) {
       setSize(BOARD_SIZES[0].value)
     }
+
     setBoard(createBoard())
     setSteps(0)
   }

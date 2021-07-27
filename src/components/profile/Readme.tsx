@@ -36,9 +36,9 @@ export default function Profile () {
     <CommonWindow>
       <div className="markdown">
         { 
-          md 
-          ? <ReactMarkdown children={md} />
-          : <Loading />
+          md
+            ? <ReactMarkdown children={md} />
+            : <Loading />
         }
       </div>
       <ConsoleLink />

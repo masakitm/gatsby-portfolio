@@ -5,7 +5,7 @@
   margin: calc(var(--sp) * 3) auto 0;
 
   animation-name: game;
-  animation-duration: 0.4s;
+  animation-duration: 0.5s;
   animation-timing-function: ease-out;
   transform: scaleX(1) scaleY(1);
 }
@@ -26,17 +26,14 @@
 
 @keyframes game {
   0% {
-    transform: scaleX(0) scaleY(0.05);
+    transform: scaleX(0) scaleY(0);
   }
 
-  5% {
-    transform: scaleX(0.25) scaleY(0.05);
+  70% {
+    transform: scaleX(1.1) scaleY(1.1);
   }
 
-  75% {
-    transform: scaleX(1.25) scaleY(0.05);
-  }
-
+  
   100% {
     transform: scaleX(1) scaleY(1);
   }

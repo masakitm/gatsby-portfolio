@@ -22,12 +22,10 @@ export function useLightsOut () {
     const row = []
 
     for (let i = 0; i < size; i++) {
-      row.push(
-        {
-          id,
-          status: Math.random() >= 0.5
-        }
-      )
+      row.push({
+        id,
+        status: Math.random() >= 0.5
+      })
       id++
     }
 
