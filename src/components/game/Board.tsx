@@ -1,8 +1,10 @@
 import * as React from 'react'
-const { useEffect } = React
+import { useSelector, useDispatch } from 'react-redux'
 
-import { useLightsOut } from '@/hooks/useLightsOut'
+import { updateSize, updateBoardSizeIndex } from '@/store/gameSlice'
+import { useLightsOut } from '@/hooks/useLightsOutWithStore'
 import { useModal } from '@/hooks/useModal'
+import { BOARD_SIZES } from '@/consts'
 
 import Cell from './Cell'
 import Header from './Header'
@@ -13,10 +15,25 @@ import Footer from './Footer'
 import * as styles from './board.module.css'
 
 export default function Board () {
-  const { board, size, steps, allChecked, update, init, setSize } = useLightsOut()
+  const { board, size, steps, allChecked, update, init } = useLightsOut()
   const { showModal, toggleModal } = useModal()
 
-  useEffect(() => init(), [])
+  // redux
+  const dispatch = useDispatch()
+  const setSize = (size: number) => dispatch(updateSize(size))
+  const setBoardSizeIndex = (size: number) => dispatch(updateBoardSizeIndex(size))
+  const boardSizeIndex = useSelector<RootState, number>(state => state.game.boardSizeIndex)
+
+  const moveBoard = () => {
+    if (BOARD_SIZES[boardSizeIndex + 1]) {
+      setBoardSizeIndex(boardSizeIndex + 1)
+      setSize(BOARD_SIZES[boardSizeIndex].value)
+      return
+    }
+
+    setBoardSizeIndex(0)
+    setSize(BOARD_SIZES[boardSizeIndex].value)
+  }
 
   return (
     <div>
@@ -68,14 +85,15 @@ export default function Board () {
       {
         allChecked && (
           <Congrats
-            isLastLevel={false}
+            moveBoard={moveBoard}
+            isLastLevel={(boardSizeIndex + 1) === BOARD_SIZES.length}
           />
         )
       }
 
       <Footer
         size={size}
-        click={setSize}
+        moveBoard={moveBoard}
       />
     </div>
   )

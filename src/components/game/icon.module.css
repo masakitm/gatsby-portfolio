@@ -13,8 +13,12 @@
   margin: 2px;
   border-radius: var(--radius);
   background: var(--blue);
+  transition-timing-function: ease-out;
+  transition-duration: 0.21s;
+  transform: perspective(600px) rotateX(180deg);
 }
 
 .colored {
   background: var(--orange);
+  transform: perspective(600px) rotateX(0deg);
 }

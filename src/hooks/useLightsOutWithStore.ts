@@ -1,22 +1,29 @@
 // lightsout
 import * as React from "react"
-const { useMemo, useState, useEffect } = React
-
 import { clone } from '@/utils'
 import { BOARD_SIZES } from '@/consts'
+import { useSelector, useDispatch } from "react-redux";
+import { GameState, updateBoard, updateSize, updateSteps } from '@/store/gameSlice'
+
+const { useMemo, useEffect } = React
 
 const isCleared = (board: Board): boolean => board.flat().every((cell: Cell) => cell.status === true)
 
 export function useLightsOut () {
   let id = 0
 
-  const [board, setBoard] = useState<Board>([])
-  const [size, setSize] = useState<number>(BOARD_SIZES[0].value)
-  const [steps, setSteps] = useState<number>(0)
+  // redux
+  const dispatch = useDispatch()
+  const { board, size, steps } = useSelector<RootState, GameState>(state => state.game)
+  
+  const setSteps = (payload: number) => dispatch(updateSteps(payload))
+  const setSize = (payload: number) => dispatch(updateSize(payload))
+  const setBoard = (payload: Board) => dispatch(updateBoard(payload))
+
+  // main
+  useEffect(() => init(), [size])
 
   const allChecked = useMemo(() => isCleared(board), [board]);
-
-  useEffect(() => init(), [size])
   
   const createRow = (): Row => {
     const row = []
@@ -43,6 +50,10 @@ export function useLightsOut () {
   }
 
   const init = () => {
+    if (!size) {
+      setSize(BOARD_SIZES[0].value)
+    }
+
     setBoard(createBoard())
     setSteps(0)
   }
@@ -68,7 +79,7 @@ export function useLightsOut () {
     }
 
     setBoard(cloned)
-    setSteps(prevState => prevState + 1)
+    setSteps(steps + 1)
   }
 
   return {

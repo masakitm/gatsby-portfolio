@@ -1,11 +1,12 @@
 TODO
-1. add redux, redux toolkit
-2. manage global states
-3. add mdx blog
-4. add next stage button to congrats (with redux)
-5. design update for blog contents//
-
-
+1. -add redux, redux toolkit
+2. -manage global states
+3. -add mdx blog
+4. -add next stage button to congrats (with redux)
+5. -design update for blog contents
+6. -refactor hooks with redux
+7. redesin blog style
+8. refactor directory structure like game/store, profile/components
 
 
 

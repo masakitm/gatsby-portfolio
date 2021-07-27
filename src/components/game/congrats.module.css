@@ -3,6 +3,11 @@
   margin-bottom: var(--sp);
 }
 
+.button {
+  position: relative;
+  margin-top: var(--sp);
+}
+
 .congrats {
   opacity: 1;
   animation-name: fadeIn;
