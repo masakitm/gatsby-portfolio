@@ -1,16 +1,24 @@
 import * as React from 'react'
+const { useState, useEffect } = React
+
+import IconArrow from '@/components/common/IconArrow'
+import Icon from '@/components/game/Icon'
+
 import * as styles from './congrats.module.css'
 
-import Icon from './Icon'
-
 type Props = {
-  isLastLevel: boolean
+  isLastLevel: boolean,
+  moveBoard: () => void
 }
 
-const cells = [1,2,3,4,5,6,7,8,9]
-
 export default function Congrats (props: Props) {
-  const { isLastLevel } = props
+  const { isLastLevel, moveBoard } = props
+
+  const [cells, setCells] = useState<[] | number[]>([])
+
+  useEffect(() => {
+    setTimeout(() => setCells([1,2,3,4,5,6,7,8,9]), 1800)
+  }, [])
 
   return (
   <div className={styles.contents}>
@@ -24,10 +32,20 @@ export default function Congrats (props: Props) {
               おめでとう！<br />
               次のステージにチャレンジしてみましょう<br />
             </p>
-            <Icon
-              coloredCells={cells}
-              size={6}
-            />
+
+            <div>
+              <Icon
+                coloredCells={cells}
+                size={6}
+              />
+            </div>
+
+            <button
+              className={styles.button}
+              onClick={moveBoard}
+            >
+              次へすすむ <IconArrow />
+            </button>
           </div>
         )
       }
@@ -35,7 +53,7 @@ export default function Congrats (props: Props) {
       {
         isLastLevel && (
           <div>
-            <p className="mb1">パズルマスターです！おめでとう！</p>
+            <p className="mb1">あなたはパズルマスターです！おめでとう！</p>
             <Icon
               coloredCells={cells}
               size={6}

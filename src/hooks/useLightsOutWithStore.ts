@@ -2,7 +2,6 @@
 import * as React from "react"
 import { clone } from '@/utils'
 import { BOARD_SIZES } from '@/consts'
-// import { setSteps, setBoard, setSize, board, size, steps } from '@/selectors/game'
 import { useSelector, useDispatch } from "react-redux";
 import { GameState, updateBoard, updateSize, updateSteps } from '@/store/gameSlice'
 
@@ -52,7 +51,9 @@ export function useLightsOut () {
   }
 
   const init = () => {
-    setSize(BOARD_SIZES[0].value)
+    if (!size) {
+      setSize(BOARD_SIZES[0].value)
+    }
     setBoard(createBoard())
     setSteps(0)
   }

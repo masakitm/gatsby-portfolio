@@ -1,18 +1,19 @@
 import * as React from 'react'
-import IconArrow from '@/components/common/IconArrow'
 
 import { BOARD_SIZES } from '@/consts'
+
+import IconArrow from '@/components/common/IconArrow'
 
 import * as styles from './footer.module.css'
 
 type Props = {
   size: number,
-  click: (args: number) => void
+  moveBoard: () => void
 }
 
 export default function Footer (props: Props) {
-  const { size, click } = props
-  
+  const { size, moveBoard } = props
+
   return (
     <div className={styles.footer}>
       {
@@ -24,15 +25,7 @@ export default function Footer (props: Props) {
                   <button
                     className={styles.button}
                     key={item.name}
-                    onClick={
-                      () => {
-                        click(
-                          BOARD_SIZES[index + 1]
-                            ? BOARD_SIZES[index + 1].value
-                            : BOARD_SIZES[0].value
-                        )
-                      }
-                    }
+                    onClick={moveBoard}
                   >
                     {item.name} <IconArrow />
                   </button>

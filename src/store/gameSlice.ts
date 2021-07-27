@@ -3,13 +3,15 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 export type GameState =  {
   board: Board,
   size: number,
-  steps: number
+  steps: number,
+  boardSizeIndex: number
 } 
 
 const initialState: GameState = {
   board: [],
   size: 0,
-  steps: 0
+  steps: 0,
+  boardSizeIndex: 0
 }
 
 export const gameSlice = createSlice({
@@ -24,8 +26,11 @@ export const gameSlice = createSlice({
     },
     updateSteps: (state, action: PayloadAction<number>) => {
       state.steps = action.payload
+    },
+    updateBoardSizeIndex: (state, action: PayloadAction<number>) => {
+      state.boardSizeIndex = action.payload
     }
   }
 })
 
-export const { updateBoard, updateSize, updateSteps } = gameSlice.actions
+export const { updateBoard, updateSize, updateSteps, updateBoardSizeIndex } = gameSlice.actions
