@@ -4,9 +4,9 @@ import { graphql } from "gatsby"
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import CommonWindow from '@/components/common/CommonWindow'
-import CommonInformation from '@/components/common/CommonInformation'
-import ConsoleLink from '@/components/common/ConsoleLink'
+import CommonWindow from '@/common/components/CommonWindow'
+import CommonInformation from '@/common/components/CommonInformation'
+import ConsoleLink from '@/common/components/ConsoleLink'
 
 import { AUTHOR } from '@/consts'
 

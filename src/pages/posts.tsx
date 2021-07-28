@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { Link, graphql } from "gatsby"
 
-import CommonWindow from '@/components/common/CommonWindow'
-import CommonInformation from '@/components/common/CommonInformation'
-import ConsoleLink from '@/components/common/ConsoleLink'
+import CommonWindow from '@/common/components/CommonWindow'
+import CommonInformation from '@/common/components/CommonInformation'
+import ConsoleLink from '@/common/components/ConsoleLink'
 
 type ArticleProps = {
   info: {

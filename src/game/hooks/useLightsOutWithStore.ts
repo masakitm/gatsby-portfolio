@@ -3,7 +3,7 @@ import * as React from "react"
 import { clone } from '@/utils'
 import { BOARD_SIZES } from '@/consts'
 import { useSelector, useDispatch } from "react-redux";
-import { GameState, updateBoard, updateSize, updateSteps } from '@/store/gameSlice'
+import { GameState, updateBoard, updateSize, updateSteps } from '@/game/slice/gameSlice'
 
 const { useMemo, useEffect } = React
 

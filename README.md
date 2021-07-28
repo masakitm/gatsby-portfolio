@@ -1,3 +1,20 @@
+## ディレクトリ構成について
+
+atomic designは優れたストラクチャーです。  
+ですが、3年ほどatomic designを用いた各開発現場を眺めた際、すべてを真に有効に活用出来ているシチュエーションは少ないと感じました。  
+  
+具体的にはatomsとmoleculesを分けるメリットが少なく感じたこと、templateを活用している現場が少ないこと、  
+page依存の強いコンポーネントも共通としてatomic designの構成に無理に落とし込もうとしていたことがあげられます。  
+  
+そこで本プロジェクトではatomic designを排し、pagesディレクトリのみ残して残りは関心にて分離することを考えました。  
+hooks、reduxのsliceを機能ではなく関心でディレクトリ構成し、合わせてコンポーネントも関心で分離する手法です。  
+  
+既存のプロジェクトとはかなり異なる構成ですが、本プロジェクトにおいては有効に機能しています。
+
+
+
+
+
 TODO
 1. -add redux, redux toolkit
 2. -manage global states
@@ -14,6 +31,9 @@ Refference
 https://dev.to/adamgoth/building-a-blog-with-gatsby-and-mdx-2eh9
 https://dnrsm.dev/blog/2020/gatsby-mdx-table-of-contents
 
+
+
+<!-- 
 <p align="center">
   <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
     <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
@@ -67,4 +87,4 @@ https://dnrsm.dev/blog/2020/gatsby-mdx-table-of-contents
 
 Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
 
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal) -->

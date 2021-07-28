@@ -19,13 +19,13 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/src/posts/`,
+        path: `${__dirname}/src/posts/articles`,
       },
     },
     {
       resolve: "gatsby-plugin-page-creator",
       options: {
-        path: `${__dirname}/src/posts`,
+        path: `${__dirname}/src/posts/articles`,
       },
     },
     {
@@ -33,7 +33,7 @@ module.exports = {
       options: {
         extensions: [`.mdx`, `.md`],
         defaultLayouts: {
-          posts: require.resolve(`${__dirname}/src/components/posts/Layout.tsx`),
+          posts: require.resolve(`${__dirname}/src/posts/components/Layout.tsx`),
         },
       },
     }

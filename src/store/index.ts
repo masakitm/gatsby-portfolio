@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
-import { gameSlice } from './gameSlice'
-import { profileSlice } from './profileSlice'
+import { gameSlice } from '@/game/slice/gameSlice'
+import { profileSlice } from '@/profile/slice/profileSlice'
 
 
 // Infer the `RootState` and `AppDispatch` types from the store itself

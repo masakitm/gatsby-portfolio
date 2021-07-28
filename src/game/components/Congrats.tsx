@@ -1,8 +1,8 @@
 import * as React from 'react'
 const { useState, useEffect } = React
 
-import IconArrow from '@/components/common/IconArrow'
-import Icon from '@/components/game/Icon'
+import IconArrow from '@/common/components/IconArrow'
+import Icon from '@/game/components/Icon'
 
 import * as styles from './congrats.module.css'
 

@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
-import { updateSize, updateBoardSizeIndex } from '@/store/gameSlice'
-import { useLightsOut } from '@/hooks/useLightsOutWithStore'
-import { useModal } from '@/hooks/useModal'
+import { updateSize, updateBoardSizeIndex } from '@/game/slice/gameSlice'
+import { useLightsOut } from '@/game/hooks/useLightsOutWithStore'
+import { useModal } from '@/game/hooks/useModal'
 import { BOARD_SIZES } from '@/consts'
 
 import Cell from './Cell'

@@ -1,6 +1,6 @@
 import * as React from 'react'
-import Readme from '@/components/profile/Readme'
-import CommonInformation from '@/components/common/CommonInformation'
+import Readme from '@/profile/components/Readme'
+import CommonInformation from '@/common/components/CommonInformation'
 
 export default function ProfilePage () {
   return(
