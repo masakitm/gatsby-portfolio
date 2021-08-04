@@ -6,10 +6,15 @@ atomic designは優れたストラクチャーです。
 具体的にはatomsとmoleculesを分けるメリットが少なく感じたこと、templateを活用している現場が少ないこと、  
 page依存の強いコンポーネントも共通としてatomic designの構成に無理に落とし込もうとしていたことがあげられます。  
   
-そこで本プロジェクトではatomic designを排し、pagesディレクトリのみ残して残りは関心にて分離することを考えました。  
-hooks、reduxのsliceを機能ではなく関心でディレクトリ構成し、合わせてコンポーネントも関心で分離する手法です。  
+そこで本プロジェクトではatomic designを排し、pagesディレクトリのみ残して、試験的に残りを関心にて分離することを考えました。  
+hooks、reduxのsliceを機能ではなく関心でディレクトリ構成し、合わせてコンポーネントも関心ベースで分離する手法です。  
   
 既存のプロジェクトとはかなり異なる構成ですが、本プロジェクトにおいては有効に機能しています。
+
+
+
+
+
 
 
 
@@ -24,7 +29,7 @@ TODO
 6. -refactor hooks with redux
 7. redesin blog style
 8. refactor directory structure like game/store, profile/components
-
+9. add breakout clone
 
 
 Refference

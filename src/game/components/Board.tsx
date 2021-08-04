@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { updateSize, updateBoardSizeIndex } from '@/game/slice/gameSlice'
 import { useLightsOut } from '@/game/hooks/useLightsOutWithStore'
 import { useModal } from '@/game/hooks/useModal'
-import { BOARD_SIZES } from '@/consts'
+import { BOARD_SIZES } from '@/game/consts'
 
 import Cell from './Cell'
 import Header from './Header'
