@@ -1,0 +1,7 @@
+/* Next Block */
+.next_block {
+  display: grid;
+  grid-template-columns: repeat(4, var(--tetris_tile));
+  align-self: flex-start;
+  grid-area: l; /* Grid area l left column */
+}

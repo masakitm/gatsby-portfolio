@@ -12,8 +12,12 @@ type ArticleProps = {
 }
 function Article ({ info }: ArticleProps) {
   const { title, slug, date } = info
+
   return (
-    <div className="markdown">
+    <div 
+      className="markdown"
+      style={{ width: "fit-content" }}
+    >
       <Link to={slug}>
         <h1>{title || 'No Title'}</h1>
         <h6>{date || '2099/01/01'}</h6>
@@ -43,7 +47,7 @@ export default function Posts ({ data }: PostsProps) {
       <CommonInformation />
 
       <div>
-        {data?.allMdx?.edges?.map(edge => {
+        {data?.allMdx.edges.map(edge => {
             return (
               <CommonWindow>
                 <Article
