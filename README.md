@@ -28,17 +28,19 @@ hooks、reduxのsliceを機能ではなく関心でディレクトリ構成し�
 
 
 
-TODO
+# TODO
 1. -add redux, redux toolkit
 2. -manage global states
 3. -add mdx blog
 4. -add next stage button to congrats (with redux)
 5. -design update for blog contents
 6. -refactor hooks with redux
-7. redesin blog style
-8. refactor directory structure like game/store, profile/components
+7. redesin blog style or blog moves to zenn.dev
+8. -refactor directory structure like game/store, profile/components -
 9. tetris add lines, level up, speed up
 10. change framework to next.js
+11. to be continued...
+
 
 
 Refference
