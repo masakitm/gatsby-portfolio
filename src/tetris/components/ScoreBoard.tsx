@@ -9,12 +9,12 @@ import * as styles from './scoreboard.module.css'
 export default function ScoreBoard() {
   const dispatch = useDispatch()
   const tetris = useSelector<RootState, TetrisState>(state => state.tetris)
-  const { score, isRunning, gameOver } = tetris
+  const { score, isRunning, gameOver, line, level } = tetris
 
   const onClickPauseButton = () => {
-    if (gameOver) { 
-      return 
-    }
+    if (gameOver) {
+      return
+    } 
 
     if (isRunning) {
       dispatch(pause())
@@ -30,8 +30,9 @@ export default function ScoreBoard() {
 
   return (
     <div className={styles.score_board}>
+      <div>レベル: <span className="bold">{ level }</span></div>
       <div>スコア: <span className="bold">{ score }</span></div>
-      <div>レベル: <span className="bold">1</span></div>
+      <div>ライン: <span className="bold">{ line }</span></div>
 
       <button
         className={styles.score_board_button} 

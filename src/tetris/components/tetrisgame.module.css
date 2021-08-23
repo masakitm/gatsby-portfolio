@@ -1,11 +1,11 @@
 .tetris {
-  --col-side: calc(var(--tetris_tile) * 4);
+  --col-side: calc(var(--tetris_tile) * 2.5);
   --col-center: calc(var(--tetris_tile) * 10);
   --grid-height: calc(var(--tetris_tile) * 20);
 
   position: relative;
   display: grid;
-  width: calc(var(--tetris_tile) * (4 + 1 + 10 + 1 + 4));
+  width: calc(var(--tetris_tile) * (3 + 1 + 10 + 1 + 4));
   margin: calc(var(--sp) * 2) auto 0;
 
   grid-gap: var(--tetris_tile) var(--tetris_tile);

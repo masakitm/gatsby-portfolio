@@ -96,6 +96,9 @@ a:visited {
   font-weight: bold;
 }
 
+.paragraph {
+  margin-top: calc(var(--sp) * 2);
+}
 
 @keyframes buttonIconRight {
   0% {

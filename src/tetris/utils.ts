@@ -1,5 +1,5 @@
 import { clone } from '@/utils/index'
-import { PIECES, BOARD_HEIGHT, BOARD_WIDTH, POINTS } from '@/tetris/consts'
+import { PIECES, BOARD_HEIGHT, BOARD_WIDTH } from '@/tetris/consts'
 
 import { Grid, Shape, Rotation, Position, GameOver } from '@/tetris/slice/tetrisSlice'
 
@@ -33,16 +33,17 @@ export const canMoveTo = (shape: Shape, grid: Grid, x: Position, y: Position, ro
 
         const possibleRow = grid[proposedY]
 
-        if (possibleRow) {
-          if (possibleRow[proposedX] === undefined || possibleRow[proposedX] !== 0) {
-            return false
-          }
-        } else {
+        if (!possibleRow) {
+          return false
+        } 
+        
+        if (possibleRow[proposedX] === undefined || possibleRow[proposedX] !== 0) {
           return false
         }
       }
     }
   }
+
   return true
 }
 
@@ -64,6 +65,7 @@ export const addBlockToGrid = (
     for (let col = 0; col < block[row].length; col++) {
       if (block[row][col]) {
         const yIndex = row + y
+
         if (yIndex < 0) {
           blockOffGrid = true
         } else {
@@ -87,5 +89,6 @@ export const checkRows = (grid: Grid) => {
       grid.unshift(Array(BOARD_WIDTH).fill(0))
     }
   }
-  return POINTS[completedRows]
+
+  return completedRows
 }

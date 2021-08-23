@@ -2,7 +2,7 @@ import * as React from 'react'
 const { useState, useEffect } = React
 
 import IconArrow from '@/common/components/IconArrow'
-import Icon from '@/game/components/Icon'
+import Icon from '@/common/components/Icon'
 
 import * as styles from './congrats.module.css'
 

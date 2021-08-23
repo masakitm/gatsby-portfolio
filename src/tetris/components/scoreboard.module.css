@@ -1,9 +1,9 @@
 .score_board {
   text-align: left;
-  grid-area: r;
+  grid-area: l;
 }
 
 .score_board_button {
   display: block;
-  padding: var(--sp);
+  margin: var(--sp) 0;
 }
