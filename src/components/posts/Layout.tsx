@@ -23,33 +23,33 @@ type Props = {
   }
 }
 
-export default function PageTemplate({ data: { mdx } }: Props ) {
+export default function PageTemplate() {
   return (
     <>
-      { mdx &&
-        <CommonInformation />
-        <CommonWindow>
-          <div 
-            className="markdown"
-            style={{ padding: "0 1rem" }}
-          >
-            <h1>{mdx.frontmatter?.title}</h1>
+      <CommonInformation />
+      <CommonWindow>
+        under constructions
 
-            <h6>
-              {`${mdx.frontmatter?.date} by ${mdx.frontmatter?.author || AUTHOR}`}
-            </h6>
-            
-            <MDXProvider components={{}}>
-              <MDXRenderer>{mdx.body}</MDXRenderer>
-            </MDXProvider>
-          </div>
+        {/* <div 
+          className="markdown"
+          style={{ padding: "0 1rem" }}
+        >
+          <h1>{mdx.frontmatter?.title}</h1>
 
-          <ConsoleLink
-            to="/posts"
-            text="BACK TO POSTS"
-          />
-        </CommonWindow>
-      }
+          <h6>
+            {`${mdx.frontmatter?.date} by ${mdx.frontmatter?.author || AUTHOR}`}
+          </h6>
+          
+          <MDXProvider components={{}}>
+            <MDXRenderer>{mdx.body}</MDXRenderer>
+          </MDXProvider>
+        </div>
+
+        <ConsoleLink
+          to="/posts"
+          text="BACK TO POSTS"
+        /> */}
+      </CommonWindow>
     </>
   )
 }
