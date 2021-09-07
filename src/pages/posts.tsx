@@ -46,8 +46,10 @@ export default function Posts ({ data }: PostsProps) {
     <>
       <CommonInformation />
 
-      <div>
-        {data?.allMdx.edges.map(edge => {
+      under constutions
+
+      {/* <div>
+        {data?.allMdx?.edges?.map(edge => {
             return (
               <CommonWindow>
                 <Article
@@ -58,7 +60,7 @@ export default function Posts ({ data }: PostsProps) {
             )
           }
         )}
-      </div>
+      </div> */}
 
       <div>
         <CommonWindow
