@@ -23,12 +23,14 @@ type Props = {
   }
 }
 
-export default function PageTemplate({ data: { mdx } }: Props ) {
+export default function PageTemplate() {
   return (
     <>
       <CommonInformation />
       <CommonWindow>
-        <div 
+        under constructions
+
+        {/* <div 
           className="markdown"
           style={{ padding: "0 1rem" }}
         >
@@ -46,7 +48,7 @@ export default function PageTemplate({ data: { mdx } }: Props ) {
         <ConsoleLink
           to="/posts"
           text="BACK TO POSTS"
-        />
+        /> */}
       </CommonWindow>
     </>
   )
