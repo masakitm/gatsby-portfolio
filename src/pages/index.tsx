@@ -32,7 +32,7 @@ export default function Index () {
             <div style={styles.links}>
               <Link to="/about">About</Link>
               <Link to="/profile">Profile</Link>
-              <Link to="/posts">Posts</Link>
+              {/* <Link to="/posts">Posts</Link> */}
               <Link to="/game">Game</Link>
             </div>
           </Console>
