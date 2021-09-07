@@ -1,16 +1,17 @@
 import * as React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 
-import { updateSize, updateBoardSizeIndex } from '@/store/gameSlice'
-import { useLightsOut } from '@/hooks/useLightsOutWithStore'
-import { useModal } from '@/hooks/useModal'
-import { BOARD_SIZES } from '@/consts'
+import { useModal } from '@/common/hooks/useModal'
+import { updateSize, updateBoardSizeIndex } from '@/game/slice/gameSlice'
+import { useLightsOut } from '@/game/hooks/useLightsOutWithStore'
+import { BOARD_SIZES } from '@/game/consts'
 
-import Cell from './Cell'
-import Header from './Header'
-import Modal from './Modal'
-import Congrats from './Congrats'
-import Footer from './Footer'
+import Cell from '@/game/components/Cell'
+import Header from '@/game/components/Header'
+import CommonModal from '@/common/components/CommonModal'
+import ModalContents from '@/game/components/ModalContents'
+import Congrats from '@/game/components/Congrats'
+import Footer from '@/game/components/Footer'
 
 import * as styles from './board.module.css'
 
@@ -77,10 +78,12 @@ export default function Board () {
         おした数: <span className={styles.count}>{steps}</span>
       </div>
 
-      <Modal
+      <CommonModal
         show={showModal}
         click={toggleModal}
-      />
+      >
+        <ModalContents />
+      </CommonModal>
 
       {
         allChecked && (

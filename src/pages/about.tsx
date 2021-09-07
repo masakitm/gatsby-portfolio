@@ -1,8 +1,8 @@
 import * as React from 'react'
-import CommonWindow from '@/components/common/CommonWindow'
-import CommonInformation from '@/components/common/CommonInformation'
+import CommonWindow from '@/common/components/CommonWindow'
+import CommonInformation from '@/common/components/CommonInformation'
 
-import ConsoleLink from '@/components/common/ConsoleLink'
+import ConsoleLink from '@/common/components/ConsoleLink'
 
 function LinkToOtherDomain ({ path }: { path: string }) {
   return (

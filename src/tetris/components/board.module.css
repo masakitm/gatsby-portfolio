@@ -1,0 +1,7 @@
+.grid_board {
+  display: grid;
+  grid-template-columns: repeat(var(--tetris_cols), var(--tetris_tile));
+  grid-gap: 0;
+  align-self: flex-start;
+  grid-area: c; /* Assign to grid area c */
+}

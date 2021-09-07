@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { Link, graphql } from "gatsby"
 
-import CommonWindow from '@/components/common/CommonWindow'
-import CommonInformation from '@/components/common/CommonInformation'
-import ConsoleLink from '@/components/common/ConsoleLink'
+import CommonWindow from '@/common/components/CommonWindow'
+import CommonInformation from '@/common/components/CommonInformation'
+import ConsoleLink from '@/common/components/ConsoleLink'
 
 type ArticleProps = {
   info: {
@@ -12,8 +12,12 @@ type ArticleProps = {
 }
 function Article ({ info }: ArticleProps) {
   const { title, slug, date } = info
+
   return (
-    <div className="markdown">
+    <div 
+      className="markdown"
+      style={{ width: "fit-content" }}
+    >
       <Link to={slug}>
         <h1>{title || 'No Title'}</h1>
         <h6>{date || '2099/01/01'}</h6>

@@ -2,8 +2,8 @@ import * as React from 'react'
 
 import * as styles from './commonWindow.module.css'
 
-import Window from '@/components/common/Window'
-import Console from '@/components/common/Console'
+import Window from '@/common/components/Window'
+import Console from '@/common/components/Console'
 
 type Props = {
   children?: React.ReactNode,

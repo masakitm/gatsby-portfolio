@@ -1,12 +1,13 @@
 import * as React from 'react'
-import Board from '@/game/components/Board'
+
+import TetrisGame from '@/tetris/components/TetrisGame'
 import ToTop from '@/common/components/ToTop'
 
-export default function GamePage () {
+export default function Tetris() {
   return (
     <>
       <ToTop />
-      <Board />
+      <TetrisGame />
     </>
   )
 }

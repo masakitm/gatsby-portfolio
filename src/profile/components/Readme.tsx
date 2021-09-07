@@ -3,11 +3,11 @@ import ReactMarkdown from 'react-markdown'
 import axios from 'axios'
 
 import { useSelector, useDispatch } from "react-redux";
-import { updateMd } from '@/store/profileSlice'
+import { updateMd } from '@/profile/slice/profileSlice'
 
-import CommonWindow from '@/components/common/CommonWindow'
-import Loading from '@/components/common/Loading'
-import ConsoleLink from '@/components/common/ConsoleLink'
+import CommonWindow from '@/common/components/CommonWindow'
+import Loading from '@/common/components/Loading'
+import ConsoleLink from '@/common/components/ConsoleLink'
 
 const { useEffect } = React
 

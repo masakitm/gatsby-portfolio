@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { ICON_CELLS } from '@/consts'
+import { ICON_CELLS } from '@/game/consts'
 
 import * as styles from './icon.module.css'
 

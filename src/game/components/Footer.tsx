@@ -1,8 +1,8 @@
 import * as React from 'react'
 
-import { BOARD_SIZES } from '@/consts'
+import { BOARD_SIZES } from '@/game/consts'
 
-import IconArrow from '@/components/common/IconArrow'
+import IconArrow from '@/common/components/IconArrow'
 
 import * as styles from './footer.module.css'
 

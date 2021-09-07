@@ -1,0 +1,9 @@
+.score_board {
+  text-align: left;
+  grid-area: l;
+}
+
+.score_board_button {
+  display: block;
+  margin: var(--sp) 0;
+}

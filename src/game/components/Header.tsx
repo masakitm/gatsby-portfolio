@@ -1,6 +1,6 @@
 import * as React from 'react'
-import { TITLE } from '@/consts'
-import Icon from './Icon'
+import { TITLE } from '@/game/consts'
+import Icon from '@/common/components/Icon'
 
 type Props = {
   [key: string]: () => void

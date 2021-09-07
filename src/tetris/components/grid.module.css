@@ -1,0 +1,54 @@
+/* Colors */
+.color_0 {
+  background-color: rgba(233,238,243,1);
+}
+
+.color_1 {
+  background-color: var(--yellow);
+}
+
+.color_2 {
+  background-color: var(--ghblue);
+}
+
+.color_3 {
+  background-color: var(--green);
+}
+
+.color_4 {
+  background-color: var(--red);
+}
+
+.color_5 {
+  background-color: var(--blue);
+}
+
+.color_6 {
+  background-color: var(--orange);
+}
+
+.color_7 {
+  background-color: var(--ghpurple);
+}
+
+/* Grid Square */
+.grid_square {
+  position: relative;
+  width: var(--tetris_tile);
+  height: var(--tetris_tile);
+  border: 1px solid var(--lightgray);
+  border-radius: var(--radius);
+}
+
+.grid_square:not(.color_0)::after {
+  content: '';
+  position: absolute;
+  width: 90%;
+  height: 20%;
+  top: 5%;
+  left: 50%;
+  border-radius: 50%;
+  filter: blur(1px);
+  transform: translate(-50%, 0);
+  background: rgba(255,255,255, 0.1);
+}

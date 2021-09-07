@@ -22,12 +22,18 @@
   --ghgreen: #94E9AD;
   --ghyellow: #FFDC00;
   --ghpink: #E088DB;
+  --ghred: #B35955;
+  --ghgold: #D0BA70;
 
   --width: 75vh;
   --radius: 6%;
   --modalWidth: 55vh;
   --modalHeight: 40vh;
   --sp: 1rem;
+
+  --tetris_cols: 10;
+  --tetris_rows: 20;
+  --tetris_tile: calc(40vh / var(--tetris_cols));
 }
 
 ::-webkit-scrollbar {
@@ -106,6 +112,13 @@ a:visited {
   font-weight: bold;
 }
 
+.bold {
+  font-weight: bold;
+}
+
+.paragraph {
+  margin-top: calc(var(--sp) * 2);
+}
 
 @keyframes buttonIconRight {
   0% {
