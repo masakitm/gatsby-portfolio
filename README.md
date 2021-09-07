@@ -39,7 +39,10 @@ hooks、reduxのsliceを機能ではなく関心でディレクトリ構成し�
 8. -refactor directory structure like game/store, profile/components -
 9. tetris add lines, level up, speed up
 10. change framework to next.js
-12. bug fix to pressing side key will stop the game
+11. bug fix to pressing side key will stop the game
+12. game pause on modal opening
+13. add jest
+14. add po
 99. to be continued...
 
 
