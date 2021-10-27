@@ -2,8 +2,9 @@ import * as React from 'react'
 import ReactMarkdown from 'react-markdown'
 import axios from 'axios'
 
-import { useSelector, useDispatch } from "react-redux";
-import { updateMd } from '@/profile/slice/profileSlice'
+// recoil
+import { mdState } from '@/profile/recoil/profileRecoil'
+import { useRecoilState } from 'recoil'
 
 import CommonWindow from '@/common/components/CommonWindow'
 import Loading from '@/common/components/Loading'
@@ -12,10 +13,7 @@ import ConsoleLink from '@/common/components/ConsoleLink'
 const { useEffect } = React
 
 export default function Profile () {
-  const dispatch = useDispatch()
-  const md = useSelector<RootState, string>(state => state.profile.md)
-
-  const setMd = (markdown: string) => dispatch(updateMd(markdown))
+  const [md, setMd] = useRecoilState(mdState)
 
   const load = async () => {
     try {
