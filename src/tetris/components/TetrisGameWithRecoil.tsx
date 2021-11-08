@@ -3,7 +3,7 @@ import * as React from 'react';
 import { useModal } from '@/common/hooks/useModal'
 import { useTetris } from '@/tetris/hooks/tetrisHooks'
 
-import Board from '@/tetris/components/BoardWithRecoilWithoutHooks'
+import Board from '@/tetris/components/BoardWithRecoil'
 import NextBlock from '@/tetris/components/NextBlock'
 import ScoreBoard from '@/tetris/components/ScoreBoard'
 import MessagePopup from '@/tetris/components/MessagePopup';
@@ -24,7 +24,7 @@ export default function TetrisGame() {
       />
       
       <div className={styles.tetris}>
-        <Board 
+        <Board
           restart={restart}
           moveDown={moveDown}
           moveLeft={moveLeft}

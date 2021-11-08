@@ -1,15 +1,29 @@
 import * as React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { pause, resume, restart } from '@/tetris/slice/tetrisSlice'
 
-import { TetrisState } from '@/tetris/slice/tetrisSlice'
+import { useRecoilValue } from 'recoil'
+
+import { 
+  isRunningState, 
+  lineState, 
+  scoreState, 
+  levelState, 
+  gameOverState,
+} from '@/tetris/recoil/tetrisRecoil'
 
 import * as styles from './scoreboard.module.css'
 
-export default function ScoreBoard() {
-  const dispatch = useDispatch()
-  const tetris = useSelector<RootState, TetrisState>(state => state.tetris)
-  const { score, isRunning, gameOver, line, level } = tetris
+export default function ScoreBoard(props: { 
+  restart: () => void,
+  pause: () => void,
+  resume: () => void
+}) {
+  const { restart, pause, resume } = props
+
+  const line = useRecoilValue(lineState)
+  const score = useRecoilValue(scoreState)
+  const level = useRecoilValue(levelState)
+  const gameOver = useRecoilValue(gameOverState)
+  const isRunning = useRecoilValue(isRunningState)
 
   const onClickPauseButton = () => {
     if (gameOver) {
@@ -17,15 +31,15 @@ export default function ScoreBoard() {
     } 
 
     if (isRunning) {
-      dispatch(pause())
+      pause()
       return
     }
 
-    dispatch(resume())
+    resume()
   }
 
   const onClickStartButton = () => {
-    dispatch(restart())
+    restart()
   }
 
   return (

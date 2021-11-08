@@ -1,8 +1,7 @@
 import { clone } from '@/utils/index'
-
 import { PIECES, BOARD_HEIGHT, BOARD_WIDTH } from '@/tetris/consts'
 
-import { Grid, Shape, Rotation, Position, GameOver } from '@/tetris/recoil/tetrisRecoil'
+import { Grid, Shape, Rotation, Position, GameOver } from '@/tetris/slice/tetrisSlice'
 
 export const getRandomNumber = (min: number, max: number): number => {
   return Math.floor(Math.random() * (max - min + 1)) + min
@@ -76,10 +75,7 @@ export const addBlockToGrid = (
     }
   }
 
-  return { 
-    grid: newGrid, 
-    gameOver: blockOffGrid 
-  }
+  return { grid: newGrid, gameOver: blockOffGrid }
 }
 
 

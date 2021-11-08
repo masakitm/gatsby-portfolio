@@ -11,6 +11,7 @@ type Cell = {
 
 type Row = [] | Cell[]
 type Board = [] | Row[]
+type BoardSizeIndex = number
 
 type Empty = null | undefined
 
